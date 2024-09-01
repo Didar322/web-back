@@ -1,0 +1,13 @@
+fastapi
+fastapi[standard]
+uvicorn[standard]
+fastapi-mail
+
+packaging
+aiofiles
+
+python-multipart
+python-jose[cryptography]
+passlib[bcrypt]
+
+pydantic[email]
