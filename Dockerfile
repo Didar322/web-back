@@ -1,15 +1,12 @@
-
-FROM python:3.9
-
+FROM tensorflow/tensorflow:latest-jupyter
 
 WORKDIR /code
 
-
 COPY ./requirements.txt /code/requirements.txt
 
+RUN apt install cmake -y
 
-RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
-
+RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt --ignore-installed embedchain
 
 COPY . /code/app
 

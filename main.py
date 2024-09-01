@@ -24,7 +24,6 @@ app.add_middleware(
 app.include_router(files)
 # ----------------------------------------
 
-
 # Redirect / -> Swagger-UI documentation
 @app.get("/")
 def main_function():

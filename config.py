@@ -1,3 +1,2 @@
-APP_NAME = "My fancy app"
-FRONTEND_URL = "http://localhost:8080/"
+APP_NAME = "Back"
 VERSION = "v1.0.0"
