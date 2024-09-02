@@ -4,8 +4,5 @@ uvicorn[standard]
 
 packaging
 aiofiles
-librosa
-pytesseract
-opencv-python
-moviepy
-dlib==19.24.2
+
+ 

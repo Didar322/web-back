@@ -6,7 +6,7 @@ import aiofiles
 
 import tensorflow as tf
 
-model = tf.keras.models.load_model("model.keras")
+# model = tf.keras.models.load_model("model.keras")
 
 router = APIRouter(
     prefix="/files",
