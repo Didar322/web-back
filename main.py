@@ -1,7 +1,6 @@
 from fastapi import Depends, FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import OAuth2PasswordRequestForm
-from fastapi_keycloak import FastAPIKeycloak, OIDCUser
 from starlette.responses import RedirectResponse
 
 from auth import create_access_token, get_current_user
