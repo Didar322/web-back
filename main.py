@@ -15,15 +15,6 @@ app = FastAPI(
     version=VERSION
 )
 
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_methods=["*"],
-    allow_headers=["*"],
-    allow_credentials=True
-)
-
 # ---- Do this for all of your routes ----
 app.include_router(files)
 # ----------------------------------------
@@ -55,3 +46,12 @@ async def protected_route(username: str = Depends(get_current_user)):
 async def protected_route(username: str, password: str):
     users_db[username] = User(username=username, password=password)
     return {"message": f"Hello, {username}! This is a create resource."}
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+    allow_credentials=True
+)
