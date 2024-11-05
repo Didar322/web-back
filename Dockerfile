@@ -4,7 +4,7 @@ WORKDIR /code
 
 COPY ./requirements.txt /code/requirements.txt
 
-RUN apt install cmake -y
+#RUN apt install cmake -y
 
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt --ignore-installed embedchain
 
