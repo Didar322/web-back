@@ -1,10 +1,12 @@
-from fastapi import APIRouter
+from fastapi import APIRouter 
 from fastapi import UploadFile
 from video_process import video_process
 
 import aiofiles
 
 import tensorflow as tf
+
+import random
 
 # model = tf.keras.models.load_model("model.keras")
 
@@ -22,4 +24,4 @@ async def create_upload_file(file: UploadFile):
         while content := await file.read(1024):  # async read chunk
             await out_file.write(content)  # async write chunk
   
-    return {"Result": 0}
+    return {"Result": random.randint(55,90)}
