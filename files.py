@@ -20,7 +20,7 @@ def get_uploadfile_size(upload_file: UploadFile):
     upload_file.file.seek(0)  # Reset the cursor to the beginning
     return file_size
 
-def scale_file_size(file_size, min_val=30, max_val=90):
+def scale_file_size(file_size, min_val=15, max_val=30):
     # Map file size to the desired range
     scaled_int = min_val + (file_size % (max_val - min_val + 1))
     return scaled_int
