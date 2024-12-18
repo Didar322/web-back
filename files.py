@@ -22,4 +22,4 @@ async def create_upload_file(file: UploadFile):
         while content := await file.read(1024):  # async read chunk
             await out_file.write(content)  # async write chunk
   
-    return {"Result": 0.78}
+    return {"Result": 0}
